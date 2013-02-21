@@ -3,19 +3,6 @@ require 'test/unit'
 
 class PersonTest < Test::Unit::TestCase
 
-  # Called before every test method runs. Can be used
-  # to set up fixture information.
-  def setup
-    #puts 'At the beginning'
-  end
-
-  # Called after every test method runs. Can be used to tear
-  # down fixture information.
-
-  def teardown
-    #puts 'At the end'
-  end
-
   # Test person
   def test_person
     p1 = Person.new
