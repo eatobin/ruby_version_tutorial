@@ -45,4 +45,5 @@ class PersonTest < Test::Unit::TestCase
     test_string = 'Fred Flintstone (7 books)'
     assert_equal(test_string, p4.to_s)
   end
+
 end

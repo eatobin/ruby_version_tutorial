@@ -29,4 +29,5 @@ class BookTest < Test::Unit::TestCase
     b2.author = 'Eric Tobin'
     assert_equal('Eric Tobin', b2.author)
   end
+
 end
