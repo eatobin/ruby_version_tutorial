@@ -7,4 +7,5 @@ class Book
     @title = title
     @author = 'unknown author'
   end
+
 end
