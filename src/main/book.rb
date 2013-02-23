@@ -1,5 +1,4 @@
 class Book
-
   attr_accessor(:author)
   attr_reader(:title)
 
@@ -7,5 +6,4 @@ class Book
     @title = title
     @author = 'unknown author'
   end
-
 end

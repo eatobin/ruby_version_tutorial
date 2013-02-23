@@ -2,7 +2,6 @@ require_relative('../main/person')
 require 'test/unit'
 
 class PersonTest < Test::Unit::TestCase
-
   def test_person
     p1 = Person.new
     assert_equal('unknown name', p1.name)
@@ -28,5 +27,4 @@ class PersonTest < Test::Unit::TestCase
     test_string = 'Fred Flintstone (7 books)'
     assert_equal(test_string, p4.to_s)
   end
-
 end
