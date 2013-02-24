@@ -29,6 +29,10 @@ class MyLibraryTest < Test::Unit::TestCase
     assert_equal(0, ml.books.index(b1))
     assert_equal(1, ml.books.index(b2))
 
+    # Try to add a duplicate book (b1) - should reject
+    ml.add_book(b1)
+    assert_equal(2, ml.books.length)
+
     ml.delete_book(b1)
     assert_equal(1, ml.books.length)
     assert_equal(0, ml.books.index(b2))
