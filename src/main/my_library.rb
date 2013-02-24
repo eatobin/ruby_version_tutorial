@@ -8,5 +8,11 @@ class My_library
     @people = Array.new
   end
 
+  def add_book(b1)
+    @books.push(b1)
+  end
 
+  def delete_book(b1)
+    @books.delete(b1)
+  end
 end
