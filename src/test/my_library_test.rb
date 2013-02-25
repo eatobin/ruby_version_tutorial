@@ -4,7 +4,6 @@ require_relative('../main/person')
 require 'test/unit'
 
 class MyLibraryTest < Test::Unit::TestCase
-
   def test_my_library
     ml = My_library.new('Test Library')
     assert_equal('Test Library', ml.name)
