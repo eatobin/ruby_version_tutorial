@@ -19,4 +19,19 @@ class My_library
       @books.delete(b1)
     end
   end
+
+  def add_person(p1)
+    unless @people.include?(p1)
+      @people.push(p1)
+    end
+  end
+
+  def to_s
+    self.name + ': ' + self.books.length.to_s + ' books; ' + self.people.length.to_s + ' people.'
+  end
+
+  ary = [1, 2, 3, 4, 5]
+  ary.each do |i|
+    puts i
+  end
 end

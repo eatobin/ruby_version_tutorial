@@ -15,10 +15,6 @@ class MyLibraryTest < Test::Unit::TestCase
     b1 = Book.new('Book1')
     b2 = Book.new('Book2')
     b3 = Book.new('Book3')
-    p1 = Person.new
-    p2 = Person.new
-    p1.name = 'Fred'
-    p2.name = 'Sue'
     ml = My_library.new('Test Library')
 
     assert_equal(0, ml.books.length)
@@ -43,5 +39,21 @@ class MyLibraryTest < Test::Unit::TestCase
 
     ml.delete_book(b2)
     assert_equal(0, ml.books.length)
+  end
+
+  def test_add_person
+    p1 = Person.new
+    p2 = Person.new
+    p1.name = 'Fred'
+    p2.name = 'Sue'
+    ml = My_library.new('Test Library')
+
+    ml.add_person(p1)
+    ml.add_person(p2)
+    assert_equal(2, ml.people.length)
+
+    # Try to add a duplicate person (p1) - should reject
+    ml.add_person(p1)
+    assert_equal(2, ml.people.length)
   end
 end
