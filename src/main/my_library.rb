@@ -30,8 +30,13 @@ class My_library
     self.name + ': ' + self.books.length.to_s + ' books; ' + self.people.length.to_s + ' people.'
   end
 
-  ary = [1, 2, 3, 4, 5]
-  ary.each do |i|
-    puts i
+  def get_available_books
+    result = Array.new
+    @books.each do |book|
+      unless book.person
+        result.push(book)
+      end
+    end
+    result
   end
 end
