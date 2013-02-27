@@ -39,4 +39,14 @@ class My_library
     end
     result
   end
+
+  def get_books_for_person(p1)
+    result = Array.new
+    @books.each do |book|
+      if book.person and book.person.eql?(p1)
+        result.push(book)
+      end
+    end
+    result
+  end
 end
