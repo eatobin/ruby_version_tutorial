@@ -49,4 +49,11 @@ class My_library
     end
     result
   end
+
+  def check_out(b1, p1)
+    books_out = self.get_books_for_person(p1).length
+    unless b1.person or books_out >= p1.maximum_books
+      b1.person = p1
+    end
+  end
 end

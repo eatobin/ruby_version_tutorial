@@ -55,4 +55,19 @@ class MyLibraryTest < Test::Unit::TestCase
     @@ml.add_person(@@p1)
     assert_equal(2, @@ml.people.length)
   end
+
+  def test_get_available_books
+    @@ml.add_book(@@b1)
+    @@ml.add_book(@@b2)
+    @@ml.add_person(@@p1)
+    @@ml.add_person(@@p2)
+    assert_equal(2, @@ml.get_available_books.length)
+    assert_equal(1, @@ml.get_available_books.index(@@b2))
+    #@@b1.person = @@p1
+    #assert_equal(0, @@ml.get_available_books.length)
+    #@@b2.person = @@p2
+    #assert_equal(10, @@ml.get_available_books.length)
+    #@@b2.person = nil
+    #assert_equal(10, @@ml.get_available_books.length)
+  end
 end
