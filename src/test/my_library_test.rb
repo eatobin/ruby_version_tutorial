@@ -57,17 +57,29 @@ class MyLibraryTest < Test::Unit::TestCase
   end
 
   def test_get_available_books
+    @@p1.maximum_books = 1
     @@ml.add_book(@@b1)
     @@ml.add_book(@@b2)
+    @@ml.add_book(@@b3)
     @@ml.add_person(@@p1)
     @@ml.add_person(@@p2)
-    assert_equal(2, @@ml.get_available_books.length)
+    assert_equal(3, @@ml.get_available_books.length)
     assert_equal(1, @@ml.get_available_books.index(@@b2))
-    #@@b1.person = @@p1
-    #assert_equal(0, @@ml.get_available_books.length)
-    #@@b2.person = @@p2
-    #assert_equal(10, @@ml.get_available_books.length)
-    #@@b2.person = nil
-    #assert_equal(10, @@ml.get_available_books.length)
+    @@ml.check_out(@@b1, @@p1)
+    assert_equal(2, @@ml.get_available_books.length)
+    assert_equal(1, @@ml.get_books_for_person(@@p1).length)
+    @@ml.check_out(@@b2, @@p1)
+    assert_equal(2, @@ml.get_available_books.length)
+    assert_equal(1, @@ml.get_books_for_person(@@p1).length)
+    @@ml.check_out(@@b1, @@p2)
+    assert_equal(2, @@ml.get_available_books.length)
+    assert_equal(0, @@ml.get_books_for_person(@@p2).length)
+    @@ml.check_out(@@b2, @@p2)
+    assert_equal(1, @@ml.get_available_books.length)
+    assert_equal(1, @@ml.get_books_for_person(@@p2).length)
+    assert_equal(0, @@ml.get_available_books.index(@@b3))
+    @@ml.check_out(@@b3, @@p2)
+    assert_equal(0, @@ml.get_available_books.length)
+    assert_equal(2, @@ml.get_books_for_person(@@p2).length)
   end
 end
