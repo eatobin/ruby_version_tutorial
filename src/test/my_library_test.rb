@@ -81,5 +81,10 @@ class MyLibraryTest < Test::Unit::TestCase
     assert_not_nil(@@ml.check_out(@@b3, @@p2))
     assert_equal(0, @@ml.get_available_books.length)
     assert_equal(2, @@ml.get_books_for_person(@@p2).length)
+
+    assert_not_nil(@@ml.check_in(@@b3))
+    assert_equal(1, @@ml.get_available_books.length)
+
+    assert_nil(@@ml.check_in(@@b3))
   end
 end

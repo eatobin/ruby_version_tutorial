@@ -56,4 +56,11 @@ class My_library
       b1.person = p1
     end
   end
+
+  def check_in(b1)
+    if b1.person
+      b1.person = nil
+      true
+    end
+  end
 end
