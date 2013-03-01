@@ -63,4 +63,10 @@ class My_library
       true
     end
   end
+
+  def print_status
+    puts 'Status report of My Library'
+    puts self.to_s
+    @books.each { |book| puts book }
+  end
 end
