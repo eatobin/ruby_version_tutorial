@@ -87,4 +87,13 @@ class MyLibraryTest < Test::Unit::TestCase
 
     assert_nil(@@ml.check_in(@@b3))
   end
+
+  def test_to_s
+    test_string = 'Test Library: 0 books; 0 people.'
+    assert_equal(test_string, @@ml.to_s)
+    @@ml.add_person(@@p1)
+    @@ml.add_book(@@b1)
+    test_string2 = 'Test Library: 1 books; 1 people.'
+    assert_equal(test_string2, @@ml.to_s)
+  end
 end
