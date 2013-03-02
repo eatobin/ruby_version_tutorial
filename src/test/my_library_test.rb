@@ -96,4 +96,15 @@ class MyLibraryTest < Test::Unit::TestCase
     test_string2 = 'Test Library: 1 books; 1 people.'
     assert_equal(test_string2, @@ml.to_s)
   end
+
+  def test_print_status
+    @@p1.maximum_books = 1
+    @@ml.add_book(@@b1)
+    @@ml.add_book(@@b2)
+    @@ml.add_book(@@b3)
+    @@ml.add_person(@@p1)
+    @@ml.add_person(@@p2)
+    test_string = ''
+    assert_equal(test_string, @@ml.print_status)
+  end
 end

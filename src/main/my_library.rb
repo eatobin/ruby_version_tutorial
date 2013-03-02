@@ -68,5 +68,11 @@ class My_library
     puts 'Status Report of My Library'
     puts self.to_s
     @books.each { |book| puts book }
+    @people.each do |person|
+      count = self.get_books_for_person(person).length
+      puts person.name + ' (has ' + count.to_s + ' of my books)'
+    end
+    puts 'Books available: ' + self.get_available_books.length.to_s
+    puts '--- End of Status Report ---'
   end
 end
