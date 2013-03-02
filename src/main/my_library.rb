@@ -65,14 +65,16 @@ class My_library
   end
 
   def print_status
-    puts 'Status Report of My Library'
-    puts self.to_s
-    @books.each { |book| puts book }
+    sr = ''
+    sr << 'Status Report of My Library' + "\n"
+    sr << self.to_s + "\n"
+    @books.each { |book| sr << book.to_s + "\n" }
     @people.each do |person|
       count = self.get_books_for_person(person).length
-      puts person.name + ' (has ' + count.to_s + ' of my books)'
+      sr << person.name + ' (has ' + count.to_s + ' of my books)' + "\n"
     end
-    puts 'Books available: ' + self.get_available_books.length.to_s
-    puts '--- End of Status Report ---'
+    sr << 'Books available: ' + self.get_available_books.length.to_s + "\n"
+    sr << '--- End of Status Report ---' + "\n"
+    sr
   end
 end

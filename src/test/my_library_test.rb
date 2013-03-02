@@ -104,7 +104,15 @@ class MyLibraryTest < Test::Unit::TestCase
     @@ml.add_book(@@b3)
     @@ml.add_person(@@p1)
     @@ml.add_person(@@p2)
-    test_string = ''
+    test_string = 'Status Report of My Library' + "\n" +
+        'Test Library: 3 books; 2 people.' + "\n" +
+        'Book1 by unknown author; Available' + "\n" +
+        'Book2 by unknown author; Available' + "\n" +
+        'Book3 by unknown author; Available' + "\n" +
+        'Fred (has 0 of my books)' + "\n" +
+        'Sue (has 0 of my books)' + "\n" +
+        'Books available: 3' + "\n" +
+        '--- End of Status Report ---' + "\n"
     assert_equal(test_string, @@ml.print_status)
   end
 end
