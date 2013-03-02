@@ -23,13 +23,9 @@ class BookTest < Test::Unit::TestCase
     b3.person = p1
 
     assert_equal('Elvis', b3.person.name)
-    test_string = 'Elvis (77 books)'
-    assert_equal(test_string, b3.person.to_s)
-
-    p b3
-
-    b4 = Book.new('A Test Book')
-
-    p b4
+    test_string_person = 'Elvis (77 books)'
+    test_string_book ='War And Peace And Donuts by unknown author; Checked out to Elvis'
+    assert_equal(test_string_person, b3.person.to_s)
+    assert_equal(test_string_book, b3.to_s)
   end
 end

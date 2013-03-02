@@ -7,6 +7,6 @@ class Person
   end
 
   def to_s
-    self.name + ' (' + self.maximum_books.to_s + ' books)'
+    name + ' (' + maximum_books.to_s + ' books)'
   end
 end

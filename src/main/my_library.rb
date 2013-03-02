@@ -27,7 +27,7 @@ class My_library
   end
 
   def to_s
-    self.name + ': ' + self.books.length.to_s + ' books; ' + self.people.length.to_s + ' people.'
+    name + ': ' + books.length.to_s + ' books; ' + people.length.to_s + ' people.'
   end
 
   def get_available_books
@@ -51,7 +51,7 @@ class My_library
   end
 
   def check_out(b1, p1)
-    books_out = self.get_books_for_person(p1).length
+    books_out = get_books_for_person(p1).length
     unless b1.person or books_out >= p1.maximum_books
       b1.person = p1
     end
@@ -65,7 +65,7 @@ class My_library
   end
 
   def print_status
-    puts 'Status report of My Library'
+    puts 'Status Report of My Library'
     puts self.to_s
     @books.each { |book| puts book }
   end
