@@ -20,5 +20,12 @@ class Library_runner
   test_library.add_person(jim)
 
   puts 'Just created new library - Tutorial'
-  test_library.print_status
+  puts test_library.print_status
+  puts 'Check out War And Peace to Sue'
+  test_library.check_out(b1, sue)
+  puts test_library.print_status
+  puts 'Check in War And Peace and check out Great Expectations to Jim'
+  test_library.check_in(b1)
+  test_library.check_out(b2, jim)
+  puts test_library.print_status
 end
