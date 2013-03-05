@@ -43,3 +43,7 @@ end
 File.open("skorks.yaml", "w") do |f|
   f.puts serialized_object_out
 end
+
+
+f = File.open("sample.txt", "r") # assume this file for the next couple of snippets
+f.read # => "something\nline 2\na third\nfour!\n5555\nsixy\nsevenly\neight"

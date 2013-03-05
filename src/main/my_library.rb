@@ -65,7 +65,7 @@ class My_library
   end
 
   def print_status
-    sr = ''
+    sr = String.new
     sr << 'Status Report of My Library' + "\n"
     sr << self.to_s + "\n"
     @books.each { |book| sr << book.to_s + "\n" }
