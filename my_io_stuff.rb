@@ -47,3 +47,8 @@ end
 
 f = File.open("sample.txt", "r") # assume this file for the next couple of snippets
 f.read # => "something\nline 2\na third\nfour!\n5555\nsixy\nsevenly\neight"
+
+f.rewind # back at the beginning
+f.readline # "something\n"
+f.readline # "line 2\n"
+f.readline # "a third\n"
