@@ -25,4 +25,20 @@ class MyUtilitiesTest < Test::Unit::TestCase
     save_file = '../../testsavestring/.txt'
     assert_nil(My_utilities.save_string_to_file(save_file, save_string))
   end
+
+  def test_convert_to_yaml
+    @@b1 = Book.new('Book1')
+    @@p1 = Person.new
+    @@p1.name = 'Fred'
+    @@ml = My_library.new('Test Library')
+    @@ml.add_book(@@b1)
+    @@ml.add_person(@@p1)
+    @@ml.check_out(@@b1, @@p1)
+    #puts My_utilities.convert_to_yaml(@@ml)
+    assert_instance_of(String, My_utilities.convert_to_yaml(@@ml))
+  end
+
+  def convert_from_yaml
+
+  end
 end
