@@ -1,0 +1,7 @@
+--- !ruby/object:C
+b_object: !ruby/object:B
+  number: 7
+  a_object: &6530460 !ruby/object:A
+    string: hello world
+    number: 5
+a_object: *6530460
