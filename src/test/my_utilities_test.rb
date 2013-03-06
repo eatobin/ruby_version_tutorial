@@ -43,7 +43,12 @@ class MyUtilitiesTest < Test::Unit::TestCase
     assert_nil(My_utilities.convert_to_yaml(save_file, @@ml))
   end
 
-  def convert_from_yaml
+  def test_convert_from_yaml
+    get_file = '../../saveyaml.yml'
+    assert_instance_of(My_library, My_utilities.convert_from_yaml(get_file))
 
+    # This should pass wth rescue error - file NOT read:
+    get_file = '../../saveyaml/.yml'
+    assert_nil(My_utilities.convert_from_yaml(get_file))
   end
 end
