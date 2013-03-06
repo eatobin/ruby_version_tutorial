@@ -27,6 +27,7 @@ class MyUtilitiesTest < Test::Unit::TestCase
   end
 
   def test_convert_to_yaml
+    save_file = '../../saveyaml.yml'
     @@b1 = Book.new('Book1')
     @@p1 = Person.new
     @@p1.name = 'Fred'
@@ -34,8 +35,12 @@ class MyUtilitiesTest < Test::Unit::TestCase
     @@ml.add_book(@@b1)
     @@ml.add_person(@@p1)
     @@ml.check_out(@@b1, @@p1)
-    #puts My_utilities.convert_to_yaml(@@ml)
-    assert_instance_of(String, My_utilities.convert_to_yaml(@@ml))
+
+    assert_true(My_utilities.convert_to_yaml(save_file, @@ml))
+
+    # This should pass wth rescue error - file NOT written:
+    save_file = '../../saveyaml/.yml'
+    assert_nil(My_utilities.convert_to_yaml(save_file, @@ml))
   end
 
   def convert_from_yaml
