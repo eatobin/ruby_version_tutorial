@@ -23,14 +23,14 @@ data = ''
 File.open("text.txt").each { |line| data << line }
 puts data
 
-data = File.read("ruby_o.yaml")
+data = File.read("ruby_o.yml")
 puts data
 
 data = ''
-File.open("ruby_o.yaml", "r").each { |line| data << line }
+File.open("ruby_o.yml", "r").each { |line| data << line }
 puts data
 
-File.open("text2.yaml", "w") do |f|
+File.open("text2.yml", "w") do |f|
   f.puts "--- !ruby/object:C
 a_object: &id001 !ruby/object:A
   number: 5
@@ -40,7 +40,7 @@ b_object: !ruby/object:B
   number: 7"
 end
 
-File.open("skorks.yaml", "w") do |f|
+File.open("skorks.yml", "w") do |f|
   f.puts serialized_object_out
 end
 
