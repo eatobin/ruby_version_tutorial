@@ -1,4 +1,5 @@
 class Library_runner
+  require_relative('../main/my_utilities')
   require_relative('../main/my_library')
   require_relative('../main/book')
   require_relative('../main/person')
@@ -28,4 +29,13 @@ class Library_runner
   test_library.check_in(b1)
   test_library.check_out(b2, jim)
   puts test_library.print_status
+
+  puts 'Now - Persistence!'
+  My_utilities.convert_to_yaml('../../runner1.yml', test_library)
+
+  new_my_library = My_utilities.convert_from_yaml('../../runner1.yml')
+
+  puts new_my_library
+  puts 'Printing information from the saved yaml file.'
+  new_my_library
 end

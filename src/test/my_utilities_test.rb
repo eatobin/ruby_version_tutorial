@@ -42,5 +42,9 @@ class MyUtilitiesTest < Test::Unit::TestCase
     # This should pass wth rescue error - file NOT read:
     get_file = '../../saveyaml2/.yml'
     assert_nil(My_utilities.convert_from_yaml(get_file))
+
+    @@b4 = Book.new('Book4')
+    @@ml2.add_book(@@b4)
+    puts @@ml2
   end
 end
