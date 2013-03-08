@@ -1,10 +1,10 @@
-require 'yaml'
+require 'psych'
 
 class My_utilities
   def self.convert_to_yaml(file_name, library_object)
     begin
       f = File.open(file_name, 'w')
-      YAML.dump(library_object, f)
+      Psych.dump(library_object, f)
       f.close
       true
     rescue
@@ -15,7 +15,7 @@ class My_utilities
   def self.convert_from_yaml(file_name)
     begin
       f = File.open(file_name, 'r')
-      return_object = YAML.load(f)
+      return_object = Psych.load(f)
       f.close
       return_object
     rescue
