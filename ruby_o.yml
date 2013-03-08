@@ -1,7 +1,0 @@
---- !ruby/object:C
-a_object: &id001 !ruby/object:A
-  number: 5
-  string: hello world
-b_object: !ruby/object:B
-  a_object: *id001
-  number: 7
