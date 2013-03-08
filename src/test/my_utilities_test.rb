@@ -8,12 +8,23 @@ class MyUtilitiesTest < Test::Unit::TestCase
   def test_1_convert_to_yaml
     save_file = '../../saveyaml.yml'
     @@b1 = Book.new('Book1')
+    @@b1.author = 'Dr. Seuss'
+    @@b2 = Book.new('Book2')
+    @@b3 = Book.new('Book3')
+    @@b3.author = 'I Wrote Book3'
     @@p1 = Person.new
+    @@p2 = Person.new
     @@p1.name = 'Fred'
+    @@p2.name = 'Sue'
+    @@p2.maximum_books = 5
     @@ml = My_library.new('Test Library')
     @@ml.add_book(@@b1)
+    @@ml.add_book(@@b2)
+    @@ml.add_book(@@b3)
     @@ml.add_person(@@p1)
+    @@ml.add_person(@@p2)
     @@ml.check_out(@@b1, @@p1)
+    @@ml.check_out(@@b2, @@p2)
 
     assert_true(My_utilities.convert_to_yaml(save_file, @@ml))
 
