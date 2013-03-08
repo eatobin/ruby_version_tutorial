@@ -34,11 +34,13 @@ class MyUtilitiesTest < Test::Unit::TestCase
   end
 
   def test_2_convert_from_yaml
-    get_file = '../../saveyaml.yml'
+    get_file = '../../saveyaml2.yml'
     assert_instance_of(My_library, My_utilities.convert_from_yaml(get_file))
+    @@ml2 = My_utilities.convert_from_yaml(get_file)
+    assert_equal('I Wrote Book56', @@ml2.books[2].author)
 
     # This should pass wth rescue error - file NOT read:
-    get_file = '../../saveyaml/.yml'
+    get_file = '../../saveyaml2/.yml'
     assert_nil(My_utilities.convert_from_yaml(get_file))
   end
 end
