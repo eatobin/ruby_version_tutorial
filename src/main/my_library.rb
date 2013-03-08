@@ -64,7 +64,7 @@ class My_library
     end
   end
 
-  def print_status
+  def library_status_string
     sr = String.new
     sr << 'Status Report of My Library' + "\n"
     sr << self.to_s + "\n"

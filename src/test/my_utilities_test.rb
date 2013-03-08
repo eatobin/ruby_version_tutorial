@@ -35,9 +35,10 @@ class MyUtilitiesTest < Test::Unit::TestCase
 
   def test_2_convert_from_yaml
     get_file = '../../saveyaml2.yml'
-    assert_instance_of(My_library, My_utilities.convert_from_yaml(get_file))
     @@ml2 = My_utilities.convert_from_yaml(get_file)
-    assert_equal('I Wrote Book56', @@ml2.books[2].author)
+
+    assert_instance_of(My_library, @@ml2)
+    assert_equal('I Wrote Book3!!', @@ml2.books[2].author)
 
     # This should pass wth rescue error - file NOT read:
     get_file = '../../saveyaml2/.yml'
@@ -45,6 +46,8 @@ class MyUtilitiesTest < Test::Unit::TestCase
 
     @@b4 = Book.new('Book4')
     @@ml2.add_book(@@b4)
-    puts @@ml2
+    assert_equal('Book4', @@ml2.books[3].title)
+
+    puts @@ml2.library_status_string
   end
 end

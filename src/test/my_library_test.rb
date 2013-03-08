@@ -97,7 +97,7 @@ class MyLibraryTest < Test::Unit::TestCase
     assert_equal(test_string2, @@ml.to_s)
   end
 
-  def test_print_status
+  def test_library_status_string
     @@p1.maximum_books = 1
     @@ml.add_book(@@b1)
     @@ml.add_book(@@b2)
@@ -113,6 +113,6 @@ class MyLibraryTest < Test::Unit::TestCase
         'Sue (has 0 of my books)' + "\n" +
         'Books available: 3' + "\n" +
         '--- End of Status Report ---' + "\n"
-    assert_equal(test_string, @@ml.print_status)
+    assert_equal(test_string, @@ml.library_status_string)
   end
 end

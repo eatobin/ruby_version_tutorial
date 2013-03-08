@@ -15,7 +15,7 @@ books:
     maximum_books: 5
 - !ruby/object:Book
   title: Book3
-  author: I Wrote Book56
+  author: I Wrote Book3!!
 people:
 - *20595360
 - *20595200
