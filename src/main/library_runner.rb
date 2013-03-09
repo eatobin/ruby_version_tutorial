@@ -35,6 +35,6 @@ class Library_runner
   My_utilities.convert_to_yaml('../../runner1.yml', test_library)
   new_my_library = My_utilities.convert_from_yaml('../../runner1.yml')
 
-  puts 'Printing information from the saved yaml file (object = new_my_library:'
+  puts 'Printing information from the saved yaml file (object = new_my_library):'
   puts new_my_library.library_status_string
 end
