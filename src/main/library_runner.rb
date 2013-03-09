@@ -37,4 +37,19 @@ class Library_runner
 
   puts 'Printing information from the saved yaml file (object = new_my_library):'
   puts new_my_library.library_status_string
+
+  b3 = Book.new('The Cat In The Hat')
+  b3.author = 'Dr. Seuss'
+  eric = Person.new
+  eric.name = 'Eric'
+  eric.maximum_books = 13
+  new_my_library.add_book(b3)
+  new_my_library.add_person(eric)
+  new_my_library.check_out(b3, eric)
+
+  puts 'Added Seuss to new_my_library and checked out to Eric (who is also new and max_books = 13):'
+  puts new_my_library.library_status_string
+
+  puts 'Saving modified new_my_library to yaml file - check it out!'
+  My_utilities.convert_to_yaml('../../runner1.yml', new_my_library)
 end
