@@ -8,18 +8,18 @@ books:
 - !ruby/object:Book
   title: Great Expectations
   author: Dickens
-  person: &10373500 !ruby/object:Person
+  person: &3625280 !ruby/object:Person
     name: Jim
     maximum_books: 3
 - !ruby/object:Book
   title: The Cat In The Hat
   author: Dr. Seuss
-  person: &10384120 !ruby/object:Person
+  person: &3635920 !ruby/object:Person
     name: Eric
     maximum_books: 13
 people:
-- *10373500
+- *3625280
 - !ruby/object:Person
   name: Sue
   maximum_books: 3
-- *10384120
+- *3635920

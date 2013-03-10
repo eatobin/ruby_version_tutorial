@@ -32,6 +32,7 @@ class Library_runner
 
   puts
   puts 'Now - Persistence!'
+  file_name = '../../file_runner_output.txt'
   My_utilities.convert_to_yaml('../../runner1.yml', test_library)
   new_my_library = My_utilities.convert_from_yaml('../../runner1.yml')
 
@@ -52,4 +53,9 @@ class Library_runner
 
   puts 'Saving modified new_my_library to yaml file (runner1.yml) - check it out!'
   My_utilities.convert_to_yaml('../../runner1.yml', new_my_library)
+
+  f = File.open(file_name, 'w')
+  f.puts new_my_library.library_status_string
+  f.close
+  true
 end
