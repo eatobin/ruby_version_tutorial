@@ -4,18 +4,22 @@ books:
 - !ruby/object:Book
   title: Book1
   author: Dr. Seuss
-  person: &20595360 !ruby/object:Person
+  person: &20595361 !ruby/object:Person
     name: Fred
     maximum_books: 3
 - !ruby/object:Book
   title: Book2
-  author: unknown author
+  author: James Taylor
   person: &20595200 !ruby/object:Person
     name: Sue
     maximum_books: 5
 - !ruby/object:Book
   title: Book3
   author: I Wrote Book3!!
+  person: *20595200
 people:
-- *20595360
+- *20595361
 - *20595200
+- !ruby/object:Person
+  name: Eddy
+  maximum_books:  10
