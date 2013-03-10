@@ -17,9 +17,16 @@ books:
   title: Book3
   author: I Wrote Book3!!
   person: *20595200
+- !ruby/object:Book
+  title: I Just Made This Up
+  author: Really I. Did
+  person: &20595209 !ruby/object:Person
+    name: A. New Guy
+    maximum_books: 1
 people:
 - *20595361
 - *20595200
 - !ruby/object:Person
   name: Eddy
   maximum_books:  10
+- *20595209

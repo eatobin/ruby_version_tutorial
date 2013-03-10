@@ -46,7 +46,7 @@ class MyUtilitiesTest < Test::Unit::TestCase
 
     @@b4 = Book.new('Book4')
     @@ml2.add_book(@@b4)
-    assert_equal('Book4', @@ml2.books[3].title)
+    assert_equal('Book4', @@ml2.books[4].title)
 
     puts @@ml2.library_status_string
   end
