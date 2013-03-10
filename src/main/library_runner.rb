@@ -50,6 +50,6 @@ class Library_runner
   puts 'Added Seuss to new_my_library and checked out to Eric (who is also new and max_books = 13):'
   puts new_my_library.library_status_string
 
-  puts 'Saving modified new_my_library to yaml file - check it out!'
+  puts 'Saving modified new_my_library to yaml file (runner1.yml) - check it out!'
   My_utilities.convert_to_yaml('../../runner1.yml', new_my_library)
 end
