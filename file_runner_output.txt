@@ -1,0 +1,10 @@
+Status Report of My Library
+Test Drive Library: 3 books; 3 people.
+War And Peace by Tolstoy; Available
+Great Expectations by Dickens; Checked out to Jim
+The Cat In The Hat by Dr. Seuss; Checked out to Eric
+Jim (has 1 of my books)
+Sue (has 0 of my books)
+Eric (has 1 of my books)
+Books available: 1
+--- End of Status Report ---
