@@ -66,7 +66,7 @@ class My_library
 
   def library_status_string
     sr = String.new
-    sr << 'Status Report of My Library' + "\n"
+    sr << '--- Status Report of My Library ---' + "\n"
     sr << self.to_s + "\n"
     @books.each { |book| sr << book.to_s + "\n" }
     @people.each do |person|
