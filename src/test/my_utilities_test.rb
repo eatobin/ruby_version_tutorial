@@ -6,7 +6,7 @@ require 'test/unit'
 
 class MyUtilitiesTest < Test::Unit::TestCase
   def test_1_convert_to_yaml
-    save_file = '../../saveyaml.yml'
+    save_file = '../../save_to_yaml.yml'
     @@b1 = Book.new('Book1')
     @@b1.author = 'Dr. Seuss'
     @@b2 = Book.new('Book2')
@@ -34,14 +34,14 @@ class MyUtilitiesTest < Test::Unit::TestCase
   end
 
   def test_2_convert_from_yaml
-    get_file = '../../saveyaml2.yml'
+    get_file = '../../save_from_yaml.yml'
     @@ml2 = My_utilities.convert_from_yaml(get_file)
 
     assert_instance_of(My_library, @@ml2)
     assert_equal('I Wrote Book3!!', @@ml2.books[2].author)
 
     # This should pass wth rescue error - file NOT read:
-    get_file = '../../saveyaml2/.yml'
+    get_file = '../../saveyaml2.yml'
     assert_nil(My_utilities.convert_from_yaml(get_file))
 
     @@b4 = Book.new('Book4')
