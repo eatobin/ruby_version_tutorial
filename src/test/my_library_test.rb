@@ -12,7 +12,7 @@ class MyLibraryTest < Test::Unit::TestCase
     @@p2 = Person.new
     @@p1.name = 'Fred'
     @@p2.name = 'Sue'
-    @@ml = My_library.new('Test Library')
+    @@ml = MyLibrary.new('Test Library')
   end
 
   def test_my_library
@@ -104,7 +104,7 @@ class MyLibraryTest < Test::Unit::TestCase
     @@ml.add_book(@@b3)
     @@ml.add_person(@@p1)
     @@ml.add_person(@@p2)
-    test_string = 'Status Report of My Library' + "\n" +
+    test_string = '--- Status Report of My Library ---' + "\n" +
         'Test Library: 3 books; 2 people.' + "\n" +
         'Book1 by unknown author; Available' + "\n" +
         'Book2 by unknown author; Available' + "\n" +

@@ -1,4 +1,4 @@
---- !ruby/object:My_library
+--- !ruby/object:MyLibrary
 name: Test Drive Library
 books:
 - !ruby/object:Book
@@ -8,18 +8,18 @@ books:
 - !ruby/object:Book
   title: Great Expectations
   author: Dickens
-  person: &19675360 !ruby/object:Person
+  person: &70147252895480 !ruby/object:Person
     name: Jim
     maximum_books: 3
 - !ruby/object:Book
   title: The Cat In The Hat
   author: Dr. Seuss
-  person: &19686060 !ruby/object:Person
+  person: &70147252890900 !ruby/object:Person
     name: Eric
     maximum_books: 13
 people:
-- *19675360
+- *70147252895480
 - !ruby/object:Person
   name: Sue
   maximum_books: 3
-- *19686060
+- *70147252890900

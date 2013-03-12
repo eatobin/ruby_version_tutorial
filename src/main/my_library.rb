@@ -1,4 +1,4 @@
-class My_library
+class MyLibrary
   attr_reader(:name)
   attr_accessor(:books, :people)
 

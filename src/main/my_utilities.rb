@@ -1,6 +1,6 @@
 require 'psych'
 
-class My_utilities
+class MyUtilities
   def self.convert_to_yaml(file_name, library_object)
     begin
       f = File.open(file_name, 'w')

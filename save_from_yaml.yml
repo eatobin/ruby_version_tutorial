@@ -1,4 +1,4 @@
---- !ruby/object:My_library
+--- !ruby/object:MyLibrary
 name: Test Library
 books:
 - !ruby/object:Book
