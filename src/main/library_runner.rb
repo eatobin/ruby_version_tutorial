@@ -1,9 +1,9 @@
-class LibraryRunner
-  require_relative('../main/my_utilities')
-  require_relative('../main/my_library')
-  require_relative('../main/book')
-  require_relative('../main/person')
+require_relative('../main/my_utilities')
+require_relative('../main/my_library')
+require_relative('../main/book')
+require_relative('../main/person')
 
+  class LibraryRunner
   b1 = Book.new('War And Peace')
   b2 = Book.new('Great Expectations')
   b1.author = 'Tolstoy'
