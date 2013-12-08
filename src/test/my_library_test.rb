@@ -2,6 +2,7 @@ require_relative('../main/my_library')
 require_relative('../main/book')
 require_relative('../main/person')
 require 'test/unit'
+require 'redgreen'
 
 class MyLibraryTest < Test::Unit::TestCase
   def setup

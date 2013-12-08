@@ -1,5 +1,6 @@
 require_relative('../main/person')
 require 'test/unit'
+require 'redgreen'
 
 class PersonTest < Test::Unit::TestCase
   def test_person

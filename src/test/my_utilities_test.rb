@@ -3,6 +3,7 @@ require_relative('../main/my_library')
 require_relative('../main/book')
 require_relative('../main/person')
 require 'test/unit'
+require 'redgreen'
 
 class MyUtilitiesTest < Test::Unit::TestCase
   def test_1_convert_to_yaml

@@ -1,6 +1,7 @@
 require_relative('../main/book')
 require_relative('../main/person')
 require 'test/unit'
+require 'redgreen'
 
 class BookTest < Test::Unit::TestCase
   def test_book
