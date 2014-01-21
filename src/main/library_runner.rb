@@ -32,7 +32,7 @@ class LibraryRunner
 
   puts
   puts 'Now - Persistence!'
-  file_name = '../../file_runner_output.txt'
+  file_name = '../../library_runner_output.txt'
   MyUtilities.convert_to_yaml('../../runner1.yml', test_library)
   new_my_library = MyUtilities.convert_from_yaml('../../runner1.yml')
 
