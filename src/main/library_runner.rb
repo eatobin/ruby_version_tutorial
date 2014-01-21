@@ -3,7 +3,7 @@ require_relative('../main/my_library')
 require_relative('../main/book')
 require_relative('../main/person')
 
-  class LibraryRunner
+class LibraryRunner
   b1 = Book.new('War And Peace')
   b2 = Book.new('Great Expectations')
   b1.author = 'Tolstoy'
