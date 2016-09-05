@@ -8,10 +8,10 @@ class Book
   end
 
   def to_s
-    unless person
-      available = 'Available'
-    else
+    if person
       available = 'Checked out to ' + person.name
+    else
+      available = 'Available'
     end
     title + ' by ' + author + '; ' + available
   end
